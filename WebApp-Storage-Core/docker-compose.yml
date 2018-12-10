@@ -1,0 +1,14 @@
+version: '3'
+services:
+  webapp:
+    container_name: webapp2
+    build:
+      context: .
+      dockerfile: Dockerfile.amd64
+    ports:
+      - "8088:80"
+    environment:
+      STORAGE_ACCOUNT_KEY: Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
+      STORAGE_ACCOUNT_NAME: mytestaccount
+      STORAGE_HOST: 10.0.75.1
+      STORAGE_PORT: 11002
